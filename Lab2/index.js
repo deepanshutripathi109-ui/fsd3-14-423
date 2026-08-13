@@ -16,7 +16,7 @@ const readContent = async (fname) => {
     return data;
 }
 const appendData = async (fname,content) => {
-    await appendFile(fname,"\n"+ content);
+    appendFile(fname,"\n"+ content);
     console.log("data appended");
 }
 await addContent("notes.txt","FS is easy in JS");
