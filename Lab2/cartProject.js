@@ -49,6 +49,27 @@ const removeProduct = async (pid)=>{
   }
 }
 
+const  updateQuantity = async (pid,options = '-') =>{    //add increase decrease by taking input from user
+  const cart = await getCart();
+  const isFoundInCart = cart.find((item) => item.id === pid);
+  if (isFoundInCart) {
+    if(option=='-'){
+      if(isFoundInCart.qty==1){
+          await removeProduct(pid);
+      }else{
+          isFoundInCart.qty -=1;
+          await saveCart(cart);
+      }
+
+    }
+    
+    console.log(`${isFoundInCart.name} quantity updated from 🛒`);
+  } else {
+    console.log(`product with id ${pid} not found`);
+  };
+  
+}
+
 
 const main = async () => {
   let choice;
@@ -85,6 +106,8 @@ const main = async () => {
         
         break;
       case 4:
+        let pid2 = await cin.question("Enter product id: ");
+        await updateQuantity(Number(pid2));
         console.log("update quantity");
         break;
       case 5:
