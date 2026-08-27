@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CricZone - Products</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial,sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #172033;
+    }
+
+    nav {
+      background: #07111f;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #22c55e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #22c55e;
+    }
+
+    .cart {
+      background: #22c55e;
+      padding: 9px 15px;
+      border-radius: 8px;
+    }
+
+    .page-header {
+      background: #07111f;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .page-header h1 {
+      font-size: 45px;
+      margin-bottom: 12px;
+    }
+
+    .page-header p {
+      color: #cbd5e1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .search {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 35px;
+    }
+
+    .search input,
+    .search select {
+      padding: 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      background: white;
+    }
+
+    .search input {
+      flex: 1;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      transition: .25s;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    }
+
+    .product-image {
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8fafc;
+      padding: 20px;
+    }
+
+    .product-image svg {
+      width: 200px;
+      height: 210px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .category {
+      color: #16a34a;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .content h3 {
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      color: #f59e0b;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .old {
+      font-size: 14px;
+      color: #9ca3af;
+      text-decoration: line-through;
+      margin-left: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #07111f;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #22c55e;
+    }
+
+    footer {
+      background: #07111f;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 40px;
+      margin-top: 70px;
+    }
+
+    @media(max-width:700px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .search {
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+  <nav>
+
+    <div class="logo">
+      Cric<span>Zone</span> 🏏
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="cart">
+      🛒 Cart <span id="cart">0</span>
+    </div>
+
+  </nav>
+
+
+  <section class="page-header">
+
+    <h1>
+      Cricket Products
+    </h1>
+
+    <p>
+      Find the perfect gear for your game.
+    </p>
+
+  </section>
+
+
+  <main class="container">
+
+
+    <div class="search">
+
+      <input
+        id="search"
+        type="text"
+        placeholder="Search products..."
+      >
+
+      <select id="filter">
+
+        <option value="all">
+          All Products
+        </option>
+
+        <option value="bat">
+          Bats
+        </option>
+
+        <option value="ball">
+          Balls
+        </option>
+
+        <option value="gloves">
+          Gloves
+        </option>
+
+        <option value="helmet">
+          Helmets
+        </option>
+
+        <option value="pads">
+          Pads
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="products">
+
+
+      <!-- BAT -->
+
+      <div class="product" data-type="bat">
+
+        <div class="product-image">
+
+          <svg viewBox="0 0 220 220">
+
+            <rect
+              x="100"
+              y="15"
+              width="20"
+              height="65"
+              rx="7"
+              fill="#8b4513"/>
+
+            <rect
+              x="98"
+              y="15"
+              width="24"
+              height="40"
+              rx="8"
+              fill="#22c55e"/>
+
+            <path
+              d="M88 70 L132 70
+              L150 190
+              Q150 200 140 202
+              L80 202
+              Q70 200 70 190 Z"
+              fill="#d6a85c"
+              stroke="#8b5a2b"
+              stroke-width="4"/>
+
+            <path
+              d="M92 80 L128 80
+              L138 175
+              L82 175 Z"
+              fill="#f0d28a"/>
+
+            <rect
+              x="95"
+              y="105"
+              width="30"
+              height="28"
+              fill="#07111f"/>
+
+            <text
+              x="110"
+              y="123"
+              fill="white"
+              font-size="9"
+              text-anchor="middle">
+              CRIC
+            </text>
+
+          </svg>
+
+        </div>
+
+        <div class="content">
+
+          <div class="category">
+            CRICKET BAT
+          </div>
+
+          <h3>
+            Premium Kashmir Willow Bat
+          </h3>
+
+          <div class="rating">
+            ★★★★★
+          </div>
+
+          <div class="price">
+            ₹4,399
+            <span class="old">₹5,499</span>
+          </div>
+
+          <button onclick="addCart()">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- BALL -->
+
+      <div class="product" data-type="ball">
+
+        <div class="product-image">
+
+          <svg viewBox="0 0 220 220">
+
+            <circle
+              cx="110"
+              cy="110"
+              r="70"
+              fill="#d71920"
+              stroke="#8b0000"
+              stroke-width="5"/>
+
+            <path
+              d="M75 48
+              C115 75 115 145 75 172"
+              fill="none"
+              stroke="white"
+              stroke-width="5"/>
+
+            <path
+              d="M145 48
+              C105 75 105 145 145 172"
+              fill="none"
+              stroke="white"
+              stroke-width="5"/>
+
+          </svg>
+
+        </div>
+
+        <div class="content">
+
+          <div class="category">
+            CRICKET BALL
+          </div>
+
+          <h3>
+            SG Super Cricket Ball
+          </h3>
+
+          <div class="rating">
+            ★★★★☆
+          </div>
+
+          <div class="price">
+            ₹454
+            <span class="old">₹599</span>
+          </div>
+
+          <button onclick="addCart()">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- GLOVES -->
+
+      <div class="product" data-type="gloves">
+
+        <div class="product-image">
+
+          <svg viewBox="0 0 220 220">
+
+            <path
+              d="M45 120
+              L45 55
+              Q45 45 53 45
+              Q61 45 61 55
+              L61 90
+              L68 90
+              L68 40
+              Q68 30 76 30
+              Q84 30 84 40
+              L84 90
+              L91 90
+              L91 38
+              Q91 28 99 28
+              Q107 28 107 38
+              L107 92
+              L114 92
+              L114 48
+              Q114 38 122 38
+              Q130 38 130 48
+              L130 125
+              Q130 145 110 158
+              L80 175
+              Q65 180 53 166
+              L38 150
+              Q30 140 35 128 Z"
+              fill="white"
+              stroke="#94a3b8"
+              stroke-width="4"/>
+
+            <path
+              d="M45 115 L115 115"
+              stroke="#22c55e"
+              stroke-width="10"/>
+
+          </svg>
+
+        </div>
+
+        <div class="content">
+
+          <div class="category">
+            BATTING GLOVES
+          </div>
+
+          <h3>
+            SG Professional Gloves
+          </h3>
+
+          <div class="rating">
+            ★★★★★
+          </div>
+
+          <div class="price">
+            ₹890
+            <span class="old">₹1,199</span>
+          </div>
+
+          <button onclick="addCart()">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- HELMET -->
+
+      <div class="product" data-type="helmet">
+
+        <div class="product-image">
+
+          <svg viewBox="0 0 220 220">
+
+            <path
+              d="M45 115
+              Q45 45 110 38
+              Q175 45 175 115
+              L175 140
+              L145 140
+              L145 112
+              Q110 88 75 112
+              L75 140
+              L45 140 Z"
+              fill="#111827"
+              stroke="#020617"
+              stroke-width="5"/>
+
+            <path
+              d="M65 110 L155 110"
+              stroke="#94a3b8"
+              stroke-width="7"/>
+
+            <path
+              d="M75 110 L75 155"
+              stroke="#94a3b8"
+              stroke-width="7"/>
+
+            <path
+              d="M95 110 L95 165"
+              stroke="#94a3b8"
+              stroke-width="7"/>
+
+            <path
+              d="M115 110 L115 165"
+              stroke="#94a3b8"
+              stroke-width="7"/>
+
+            <path
+              d="M135 110 L135 155"
+              stroke="#94a3b8"
+              stroke-width="7"/>
+
+          </svg>
+
+        </div>
+
+        <div class="content">
+
+          <div class="category">
+            PROTECTION
+          </div>
+
+          <h3>
+            Professional Cricket Helmet
+          </h3>
+
+          <div class="rating">
+            ★★★★★
+          </div>
+
+          <div class="price">
+            ₹3,279
+            <span class="old">₹3,999</span>
+          </div>
+
+          <button onclick="addCart()">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- PADS -->
+
+      <div class="product" data-type="pads">
+
+        <div class="product-image">
+
+          <svg viewBox="0 0 220 220">
+
+            <path
+              d="M48 35
+              Q70 25 90 38
+              L90 180
+              Q90 195 70 198
+              L48 198
+              Q38 195 39 180
+              L42 60 Q42 42 48 35 Z"
+              fill="white"
+              stroke="#cbd5e1"
+              stroke-width="4"/>
+
+            <path
+              d="M130 38
+              Q150 25 172 35
+              Q178 42 178 60
+              L181 180
+              Q182 195 172 198
+              L150 198
+              Q130 195 130 180 Z"
+              fill="white"
+              stroke="#cbd5e1"
+              stroke-width="4"/>
+
+            <path
+              d="M45 65 L87 65"
+              stroke="#22c55e"
+              stroke-width="8"/>
+
+            <path
+              d="M132 65 L175 65"
+              stroke="#22c55e"
+              stroke-width="8"/>
+
+            <path
+              d="M45 95 L87 95"
+              stroke="#94a3b8"
+              stroke-width="5"/>
+
+            <path
+              d="M132 95 L175 95"
+              stroke="#94a3b8"
+              stroke-width="5"/>
+
+            <path
+              d="M45 125 L87 125"
+              stroke="#94a3b8"
+              stroke-width="5"/>
+
+            <path
+              d="M132 125 L175 125"
+              stroke="#94a3b8"
+              stroke-width="5"/>
+
+          </svg>
+
+        </div>
+
+        <div class="content">
+
+          <div class="category">
+            BATTING PADS
+          </div>
+
+          <h3>
+            SG Players Extreme Pads
+          </h3>
+
+          <div class="rating">
+            ★★★★☆
+          </div>
+
+          <div class="price">
+            ₹2,479
+            <span class="old">₹2,999</span>
+          </div>
+
+          <button onclick="addCart()">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <h3>CricZone 🏏</h3>
+
+    <p>
+      Your one-stop cricket store.
+    </p>
+
+    <br>
+
+    <p>
+      © 2026 CricZone. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    let cart = 0;
+
+    function addCart() {
+
+      cart++;
+
+      document.getElementById("cart").innerText = cart;
+
+      alert("Product added to cart!");
+
+    }
+
+
+    const search =
+      document.getElementById("search");
+
+    const filter =
+      document.getElementById("filter");
+
+    const products =
+      document.querySelectorAll(".product");
+
+
+    function filterProducts() {
+
+      const text =
+        search.value.toLowerCase();
+
+      const type =
+        filter.value;
+
+
+      products.forEach(product => {
+
+        const productText =
+          product.innerText.toLowerCase();
+
+        const productType =
+          product.dataset.type;
+
+
+        if (
+          productText.includes(text) &&
+          (type === "all" || type === productType)
+        ) {
+
+          product.style.display = "block";
+
+        } else {
+
+          product.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+
+    search.addEventListener(
+      "input",
+      filterProducts
+    );
+
+    filter.addEventListener(
+      "change",
+      filterProducts
+    );
+
+  </script>
+
+</body>
+</html>

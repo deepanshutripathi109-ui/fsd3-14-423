@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About - CricZone</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial,sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #172033;
+    }
+
+    nav {
+      background: #07111f;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #22c55e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #22c55e;
+    }
+
+    .cart {
+      background: #22c55e;
+      padding: 9px 15px;
+      border-radius: 8px;
+    }
+
+    .header {
+      background: #07111f;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .header h1 {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      color: #cbd5e1;
+    }
+
+    .about {
+      max-width: 1100px;
+      margin: 70px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .about h2 span {
+      color: #22c55e;
+    }
+
+    .about p {
+      color: #667085;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .visual {
+      height: 380px;
+      background: #07111f;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ball {
+      width: 150px;
+      height: 150px;
+      background: #d71920;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .ball::after {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 50px;
+      border-top: 5px dashed white;
+      border-radius: 50%;
+      top: 50px;
+      left: 10px;
+      transform: rotate(-45deg);
+    }
+
+    .bat {
+      position: absolute;
+      width: 38px;
+      height: 210px;
+      background: #d6a85c;
+      transform: rotate(35deg);
+      right: 90px;
+      bottom: 50px;
+      border-radius: 8px;
+    }
+
+    .bat::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 65px;
+      background: #22c55e;
+      top: -60px;
+      left: 7px;
+      border-radius: 7px;
+    }
+
+    .features {
+      max-width: 1100px;
+      margin: 0 auto 70px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      background: white;
+      text-align: center;
+      padding: 35px 20px;
+      border-radius: 15px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .feature-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #07111f;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 40px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    @media(max-width:800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <nav>
+
+    <div class="logo">
+      Cric<span>Zone</span> 🏏
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="cart">
+      🛒 Cart
+    </div>
+
+  </nav>
+
+
+  <section class="header">
+
+    <h1>
+      About CricZone
+    </h1>
+
+    <p>
+      Everything for the game you love.
+    </p>
+
+  </section>
+
+
+  <section class="about">
+
+    <div>
+
+      <h2>
+        We Love <span>Cricket</span>
+      </h2>
+
+      <p>
+        CricZone is a cricket-focused online store
+        created for players who want quality equipment
+        without making shopping complicated.
+      </p>
+
+      <p>
+        From cricket bats and balls to gloves, helmets
+        and batting pads, we bring essential cricket
+        gear together in one place.
+      </p>
+
+      <p>
+        Whether you are a beginner, college player,
+        club player or simply love playing cricket,
+        CricZone is made for you.
+      </p>
+
+    </div>
+
+
+    <div class="visual">
+
+      <div class="ball"></div>
+
+      <div class="bat"></div>
+
+    </div>
+
+  </section>
+
+
+  <section class="features">
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🏏
+      </div>
+
+      <h3>
+        Quality Gear
+      </h3>
+
+      <p>
+        Reliable cricket equipment selected
+        with players in mind.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🚚
+      </div>
+
+      <h3>
+        Fast Delivery
+      </h3>
+
+      <p>
+        Get your cricket equipment delivered
+        quickly and safely.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        ⭐
+      </div>
+
+      <h3>
+        Player First
+      </h3>
+
+      <p>
+        Simple shopping experience for
+        every type of cricket player.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    <h3>CricZone 🏏</h3>
+
+    <p>
+      Your one-stop cricket store.
+    </p>
+
+    <br>
+
+    <p>
+      © 2026 CricZone. All rights reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>

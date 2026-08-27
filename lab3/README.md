@@ -14,3 +14,15 @@ css - cascade style sheet
 * 403 forbidden
 * 404 Not found
 * 500 Internal server error
+
+# Any api can be of 4 types
+* Get -> Read
+* Post ->Create
+* put/patch ->Update
+* Delete ->Delete
+Api can be respond by server with status code and json data .
+
+Api generally start with API/version
+
+
+

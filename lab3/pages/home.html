@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CricZone - Home</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #172033;
+    }
+
+    nav {
+      background: #07111f;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #22c55e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #22c55e;
+    }
+
+    .cart {
+      background: #22c55e;
+      padding: 9px 15px;
+      border-radius: 8px;
+    }
+
+    .hero {
+      min-height: 550px;
+      display: flex;
+      align-items: center;
+      padding: 60px 7%;
+      color: white;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(3,10,20,.92),
+          rgba(3,10,20,.4)
+        ),
+        url("https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=1600&q=80");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      background: #22c55e;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #16a34a;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 70px auto;
+      padding: 0 20px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .title h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .title p {
+      color: #6b7280;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 35px 25px;
+      text-align: center;
+      border-radius: 15px;
+      border: 1px solid #e5e7eb;
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0,0,0,.08);
+    }
+
+    .icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    .about-preview {
+      background: white;
+      padding: 70px 7%;
+      text-align: center;
+    }
+
+    .about-preview h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .about-preview p {
+      max-width: 750px;
+      margin: 0 auto 25px;
+      line-height: 1.8;
+      color: #6b7280;
+    }
+
+    footer {
+      background: #07111f;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 40px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    @media(max-width:800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+
+    <div class="logo">
+      Cric<span>Zone</span> 🏏
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="cart">
+      🛒 Cart
+    </div>
+
+  </nav>
+
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        Gear Up. Play Hard.
+      </h1>
+
+      <p>
+        Premium cricket bats, balls, gloves, helmets
+        and protective equipment for every player.
+      </p>
+
+      <a href="products.html" class="btn">
+        Shop Products →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <section class="container">
+
+    <div class="title">
+
+      <h2>
+        Why Choose CricZone?
+      </h2>
+
+      <p>
+        Everything you need for your cricket journey.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="icon">🏏</div>
+
+        <h3>
+          Quality Equipment
+        </h3>
+
+        <p>
+          Carefully selected cricket equipment
+          for beginners and experienced players.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">🚚</div>
+
+        <h3>
+          Fast Delivery
+        </h3>
+
+        <p>
+          Get your cricket gear delivered
+          safely and quickly.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">⭐</div>
+
+        <h3>
+          Player First
+        </h3>
+
+        <p>
+          We make cricket shopping simple,
+          affordable and convenient.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="about-preview">
+
+    <h2>
+      About CricZone
+    </h2>
+
+    <p>
+      CricZone is a cricket-focused online store
+      designed to provide players with essential
+      cricket equipment in one place.
+    </p>
+
+    <a href="about.html" class="btn">
+      Learn More →
+    </a>
+
+  </section>
+
+
+  <footer>
+
+    <h3>
+      CricZone 🏏
+    </h3>
+
+    <p>
+      Your one-stop cricket store.
+    </p>
+
+    <br>
+
+    <p>
+      © 2026 CricZone. All rights reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
