@@ -24,5 +24,7 @@ Api can be respond by server with status code and json data .
 
 Api generally start with API/version
 
+# content type
+* content type tells browser exactly which type of data is sent
 
 

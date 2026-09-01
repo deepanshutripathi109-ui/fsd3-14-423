@@ -1,35 +1,25 @@
-import http from "http";
-import { createReadStream } from "fs";
-import { readFile } from "fs/promises";
-
-const server = http.createServer(async (req, res) =>{
-    if(req.url === "/stream" ){
-        const stream = createReadStream("big.txt",{encoding:"utf-8"});
+import http from 'http'
+import { createReadStream } from 'fs';
+ const server = http.createServer((req,res)=>{
+    if(req.url=="/"){
+        const stream =createReadStream('./pages/airtag.html',{encoding:"utf-8",});
+        stream.pipe(res);
+    }else if(req.url==="/mobile"){
+        res.writeHead(200,{"content-type" : "text/json"});
+        const stream = createReadStream('./data/product.json',{encoding:"utf-8"});
+        stream.pipe(res);
+    }else if(req.url==='/manual'){
+        const stream = createReadStream('./data/chatgpt.txt',{endcoding:"utf-8"})
         stream.pipe(res);
     }
-    else if(req.url === "/normal"){
-        const text = await readFile("big.txt");
-        res.end(text);
-    }
-    else if(req.url === "/product"){
-        res.setHeader("content-type","text/html");
-        res.statusCode = 200;
-        const data = createReadStream("./pages/product.html");
-        data.pipe(res);
-    }
-    else if(req.url === "/about"){
-        res.setHeader("content-type","text/html");
-        res.statusCode = 200;
-        const data = createReadStream("./pages/about.html");
-        data.pipe(res);
-    }
-    else if(req.url === "/contact"){
-        res.setHeader("content-type","text/html");
-        res.statusCode = 200;
-        const data = createReadStream("./pages/contact.html");
-        data.pipe(res);
-    }
 
-});
+    else{
+        res.status=404;
+        res.end("Not found")
+    }
+    
+ })
 
-server.listen(3000, () => console.log("Server is running..."));
+
+ server.listen(3000,()=>console.log("prg9 is running at 3000...")
+ )
