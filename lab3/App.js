@@ -1,7 +1,7 @@
 import http from "http";
 
 const server = http.createServer((req,res)=>{
-    res.end("<h2> Welcome to Serverside </h2>")
+    res.end("<h1>SIH Internal</h1>")
 });
 
 
