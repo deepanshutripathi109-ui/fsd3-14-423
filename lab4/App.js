@@ -1,7 +1,7 @@
-import http from "http";//
+import http from "http";
 import { getAllTeams, addTeam, getTeamById,deleteTeam, updateTeamById } from "./teams.js";
 import { parse as parseUrl } from "url";
-
+//h
 const PORT = 5000;
 
 const sendJson = (res, statusCode, data, keyword, msg) => {
