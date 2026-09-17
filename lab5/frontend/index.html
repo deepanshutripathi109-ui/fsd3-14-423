@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA Athletics | Push Beyond Limits</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter & Bebas Neue -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .font-display {
+      font-family: 'Bebas Neue', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-lime-400 selection:text-black">
+
+  <!-- 1. Top Announcement Bar -->
+  <aside class="bg-lime-400 text-black py-2 px-4 text-xs font-semibold tracking-wider text-center uppercase">
+    Free express shipping on all orders over $99 • 30-Day Risk-Free Returns
+  </aside>
+
+  <!-- 2. Header & Navigation -->
+  <header class="sticky top-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="index.html" class="font-display text-4xl tracking-wider text-white hover:text-lime-400 transition-colors">
+        AURA<span class="text-lime-400">.</span>
+      </a>
+
+      <!-- Desktop Links (Includes Home, Shop, About, Enquiry) -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+        <a href="index.html" class="text-lime-400 font-semibold">HOME</a>
+        <a href="#men" class="hover:text-lime-400 transition-colors">MEN</a>
+        <a href="#women" class="hover:text-lime-400 transition-colors">WOMEN</a>
+        <a href="#footwear" class="hover:text-lime-400 transition-colors">FOOTWEAR</a>
+        <a href="about.html" class="hover:text-lime-400 transition-colors">ABOUT US</a>
+        <a href="enquiry.html" class="hover:text-lime-400 transition-colors">ENQUIRY / CONTACT</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center space-x-6 text-neutral-300">
+        <button class="hover:text-white transition-colors" aria-label="Search">
+          <i data-lucide="search" class="w-5 h-5"></i>
+        </button>
+        <button class="hover:text-white transition-colors" aria-label="Account">
+          <i data-lucide="user" class="w-5 h-5"></i>
+        </button>
+        <button class="hover:text-white transition-colors relative" aria-label="Cart">
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          <span class="absolute -top-1.5 -right-2 bg-lime-400 text-black text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section -->
+  <section class="relative h-[88vh] flex items-center justify-start overflow-hidden">
+    <!-- Hero Background Image -->
+    <img 
+      src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=2000&auto=format&fit=crop" 
+      alt="Athlete Training" 
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-60"
+    />
+    <!-- Dark Gradients -->
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-neutral-950 via-neutral-950/60 to-transparent"></div>
+
+    <!-- Hero Content -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+      <span class="inline-block px-3 py-1 bg-lime-400/10 border border-lime-400/30 text-lime-400 text-xs font-bold tracking-widest uppercase rounded-full mb-4">
+        SS/26 Performance Collection
+      </span>
+      <h1 class="font-display text-6xl sm:text-8xl lg:text-9xl leading-[0.9] tracking-tight uppercase max-w-3xl">
+        ENGINEERED TO <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-emerald-400">DOMINATE</span>
+      </h1>
+      <p class="mt-6 text-neutral-300 text-base sm:text-lg max-w-xl font-light leading-relaxed">
+        Ultra-lightweight, 4-way aerodynamic stretch gear designed to withstand the most grueling workouts on the planet.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#men" class="px-8 py-4 bg-lime-400 hover:bg-lime-300 text-black font-bold uppercase tracking-wider text-sm transition-all transform hover:-translate-y-0.5">
+          Shop Men
+        </a>
+        <a href="#women" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/20 font-bold uppercase tracking-wider text-sm transition-all transform hover:-translate-y-0.5">
+          Shop Women
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Disciplines / Category Grid -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="mb-10">
+      <p class="text-lime-400 text-xs font-bold uppercase tracking-widest">Explore</p>
+      <h2 class="font-display text-4xl sm:text-5xl tracking-wide uppercase mt-1">Shop By Discipline</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <a href="#" class="group relative h-[440px] rounded-xl overflow-hidden block border border-neutral-800">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Strength & Conditioning" />
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <h3 class="font-display text-3xl tracking-wide text-white group-hover:text-lime-400 transition-colors">STRENGTH & GYM</h3>
+          <p class="text-neutral-400 text-xs mt-1">Seamless compression, tees & shorts</p>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="#" class="group relative h-[440px] rounded-xl overflow-hidden block border border-neutral-800">
+        <img src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Running" />
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <h3 class="font-display text-3xl tracking-wide text-white group-hover:text-lime-400 transition-colors">ENDURANCE RUN</h3>
+          <p class="text-neutral-400 text-xs mt-1">Featherweight singlets & carbon racers</p>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="#" class="group relative h-[440px] rounded-xl overflow-hidden block border border-neutral-800">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Yoga and Recovery" />
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <h3 class="font-display text-3xl tracking-wide text-white group-hover:text-lime-400 transition-colors">RECOVERY & MOBILITY</h3>
+          <p class="text-neutral-400 text-xs mt-1">Buttery-soft leggings & warm-up layers</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 5. Product Releases -->
+  <section class="bg-neutral-900/50 py-20 border-y border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <p class="text-lime-400 text-xs font-bold uppercase tracking-widest">New Arrivals</p>
+          <h2 class="font-display text-4xl sm:text-5xl tracking-wide uppercase mt-1">Trending Drops</h2>
+        </div>
+        <a href="#" class="hidden sm:flex items-center space-x-2 text-sm font-semibold hover:text-lime-400 transition-colors">
+          <span>View All Releases</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product 1 -->
+        <article class="group">
+          <div class="relative bg-neutral-800 rounded-xl overflow-hidden aspect-[4/5] border border-neutral-700/50">
+            <span class="absolute top-3 left-3 bg-neutral-950/80 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded">New</span>
+            <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Tech Running Tee" />
+            <button class="absolute bottom-3 right-3 p-3 bg-lime-400 text-black rounded-full opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" aria-label="Add to bag">
+              <i data-lucide="plus" class="w-5 h-5"></i>
+            </button>
+          </div>
+          <div class="mt-4">
+            <p class="text-xs text-neutral-400">Running</p>
+            <h3 class="font-semibold text-sm mt-0.5 text-white">VaporDry Seamless Tee</h3>
+            <p class="text-sm font-bold text-neutral-200 mt-1">$48.00</p>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="group">
+          <div class="relative bg-neutral-800 rounded-xl overflow-hidden aspect-[4/5] border border-neutral-700/50">
+            <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Carbon Speed Shoes" />
+            <button class="absolute bottom-3 right-3 p-3 bg-lime-400 text-black rounded-full opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" aria-label="Add to bag">
+              <i data-lucide="plus" class="w-5 h-5"></i>
+            </button>
+          </div>
+          <div class="mt-4">
+            <p class="text-xs text-neutral-400">Footwear</p>
+            <h3 class="font-semibold text-sm mt-0.5 text-white">AeroPulse Carbon Racer</h3>
+            <p class="text-sm font-bold text-neutral-200 mt-1">$180.00</p>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="group">
+          <div class="relative bg-neutral-800 rounded-xl overflow-hidden aspect-[4/5] border border-neutral-700/50">
+            <span class="absolute top-3 left-3 bg-lime-400 text-black text-[10px] font-bold uppercase px-2.5 py-1 rounded">Best Seller</span>
+            <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Training Shorts" />
+            <button class="absolute bottom-3 right-3 p-3 bg-lime-400 text-black rounded-full opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" aria-label="Add to bag">
+              <i data-lucide="plus" class="w-5 h-5"></i>
+            </button>
+          </div>
+          <div class="mt-4">
+            <p class="text-xs text-neutral-400">Training</p>
+            <h3 class="font-semibold text-sm mt-0.5 text-white">Apex 2-in-1 Lined Short 7"</h3>
+            <p class="text-sm font-bold text-neutral-200 mt-1">$62.00</p>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="group">
+          <div class="relative bg-neutral-800 rounded-xl overflow-hidden aspect-[4/5] border border-neutral-700/50">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="High-Rise Legging" />
+            <button class="absolute bottom-3 right-3 p-3 bg-lime-400 text-black rounded-full opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" aria-label="Add to bag">
+              <i data-lucide="plus" class="w-5 h-5"></i>
+            </button>
+          </div>
+          <div class="mt-4">
+            <p class="text-xs text-neutral-400">Studio & Gym</p>
+            <h3 class="font-semibold text-sm mt-0.5 text-white">SculptFlex High-Rise Legging</h3>
+            <p class="text-sm font-bold text-neutral-200 mt-1">$78.00</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Features / Tech Highlights -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="p-8 border border-neutral-800 rounded-2xl bg-neutral-900/30">
+        <div class="w-12 h-12 rounded-lg bg-lime-400/10 text-lime-400 flex items-center justify-center mb-6">
+          <i data-lucide="wind" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">AeroKnit Ventilation</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">Micro-perforations mapped directly to body heat zones keep your core temperature cool under peak output.</p>
+      </div>
+
+      <div class="p-8 border border-neutral-800 rounded-2xl bg-neutral-900/30">
+        <div class="w-12 h-12 rounded-lg bg-lime-400/10 text-lime-400 flex items-center justify-center mb-6">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Anti-Chafe Bonding</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">Ultrasonic flat-seam construction guarantees zero skin irritation across full marathons and heavy lifts.</p>
+      </div>
+
+      <div class="p-8 border border-neutral-800 rounded-2xl bg-lime-400/10 border-lime-400/30">
+        <div class="w-12 h-12 rounded-lg bg-lime-400 text-black flex items-center justify-center mb-6">
+          <i data-lucide="leaf" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Recycled Ocean Polymers</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Over 70% of our yarn is made using certified marine post-consumer recycled fabrics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Footer -->
+  <footer class="bg-neutral-900 border-t border-neutral-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-12 border-b border-neutral-800 items-center">
+        <div>
+          <h2 class="font-display text-3xl sm:text-4xl tracking-wide uppercase text-white">JOIN THE AURA ATHLETE CLUB</h2>
+          <p class="text-neutral-400 text-sm mt-1">Get 15% off your first order, early access to drops, and training perks.</p>
+        </div>
+        <form class="flex max-w-md w-full gap-2">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="bg-neutral-950 border border-neutral-700 px-4 py-3 rounded-lg text-sm text-white focus:outline-none focus:border-lime-400 flex-1"
+            required
+          />
+          <button type="submit" class="bg-lime-400 hover:bg-lime-300 text-black font-bold uppercase text-xs tracking-wider px-6 py-3 rounded-lg transition-colors">
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12 text-sm">
+        <div>
+          <h4 class="font-semibold text-white tracking-wider uppercase text-xs mb-4">Shop</h4>
+          <ul class="space-y-2.5 text-neutral-400">
+            <li><a href="#men" class="hover:text-white transition-colors">Men's Gear</a></li>
+            <li><a href="#women" class="hover:text-white transition-colors">Women's Gear</a></li>
+            <li><a href="#footwear" class="hover:text-white transition-colors">Footwear</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Accessories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white tracking-wider uppercase text-xs mb-4">Support</h4>
+          <ul class="space-y-2.5 text-neutral-400">
+            <li><a href="enquiry.html" class="hover:text-white transition-colors">Order Status</a></li>
+            <li><a href="enquiry.html" class="hover:text-white transition-colors">Shipping Info</a></li>
+            <li><a href="enquiry.html" class="hover:text-white transition-colors">Returns & Exchanges</a></li>
+            <li><a href="enquiry.html" class="hover:text-white transition-colors">Contact Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white tracking-wider uppercase text-xs mb-4">Company</h4>
+          <ul class="space-y-2.5 text-neutral-400">
+            <li><a href="about.html" class="hover:text-white transition-colors">Our Story & Mission</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">Sustainability</a></li>
+            <li><a href="enquiry.html" class="hover:text-white transition-colors">Wholesale & Teams</a></li>
+            <li><a href="enquiry.html" class="hover:text-white transition-colors">Sponsorships</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white tracking-wider uppercase text-xs mb-4">Follow Us</h4>
+          <div class="flex space-x-4 text-neutral-400">
+            <a href="#" class="hover:text-lime-400 transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="#" class="hover:text-lime-400 transition-colors" aria-label="YouTube"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+            <a href="#" class="hover:text-lime-400 transition-colors" aria-label="Twitter"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar with direct cross-page links -->
+      <div class="pt-8 border-t border-neutral-800/60 flex flex-col sm:flex-row justify-between text-xs text-neutral-500 space-y-4 sm:space-y-0">
+        <p>&copy; 2026 AURA Athletics Inc. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="index.html" class="hover:text-neutral-300 text-lime-400">Home</a>
+          <a href="about.html" class="hover:text-neutral-300">About Us</a>
+          <a href="enquiry.html" class="hover:text-neutral-300">Enquiry</a>
+          <a href="#" class="hover:text-neutral-400">Privacy Policy</a>
+          <a href="#" class="hover:text-neutral-400">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Activate Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
