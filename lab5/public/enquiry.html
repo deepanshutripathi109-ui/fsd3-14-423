@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make an Enquiry | AURA Athletics</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter & Bebas Neue -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .font-display {
+      font-family: 'Bebas Neue', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-lime-400 selection:text-black">
+
+  <!-- Top Announcement Bar -->
+  <aside class="bg-lime-400 text-black py-2 px-4 text-xs font-semibold tracking-wider text-center uppercase">
+    Free express shipping on all orders over $99 • 30-Day Risk-Free Returns
+  </aside>
+
+  <!-- Header & Navigation -->
+  <header class="sticky top-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="font-display text-4xl tracking-wider text-white hover:text-lime-400 transition-colors">
+        AURA<span class="text-lime-400">.</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+        <a href="index.html" class="hover:text-lime-400 transition-colors">HOME</a>
+        <a href="about.html" class="hover:text-lime-400 transition-colors">ABOUT US</a>
+        <a href="enquiry.html" class="text-lime-400 font-semibold">ENQUIRY / CONTACT</a>
+      </nav>
+
+      <div class="flex items-center space-x-6 text-neutral-300">
+        <button class="hover:text-white transition-colors" aria-label="Search"><i data-lucide="search" class="w-5 h-5"></i></button>
+        <button class="hover:text-white transition-colors" aria-label="Account"><i data-lucide="user" class="w-5 h-5"></i></button>
+        <button class="hover:text-white transition-colors relative" aria-label="Cart">
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          <span class="absolute -top-1.5 -right-2 bg-lime-400 text-black text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Enquiry Section -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      
+      <!-- Left Column: Information -->
+      <div class="lg:col-span-5 space-y-8">
+        <div>
+          <span class="text-lime-400 text-xs font-bold uppercase tracking-widest">Connect With Us</span>
+          <h1 class="font-display text-5xl sm:text-7xl uppercase tracking-tight text-white mt-1">LET'S BUILD TOGETHER</h1>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed mt-4">
+            Interested in team or gym wholesale discounts, custom co-branded kits, athlete sponsorships, or media relations? Send us your brief and an AURA representative will get back within 24 hours.
+          </p>
+        </div>
+
+        <div class="space-y-6 pt-4 border-t border-neutral-800">
+          <div class="flex items-start space-x-4">
+            <div class="p-3 rounded-lg bg-neutral-900 border border-neutral-800 text-lime-400">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs uppercase font-semibold text-neutral-400 tracking-wider">Email Us</p>
+              <p class="text-white font-medium text-sm mt-0.5">support@aura-athletics.com</p>
+              <p class="text-white font-medium text-sm">wholesale@aura-athletics.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="p-3 rounded-lg bg-neutral-900 border border-neutral-800 text-lime-400">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs uppercase font-semibold text-neutral-400 tracking-wider">Call Directly</p>
+              <p class="text-white font-medium text-sm mt-0.5">+1 (800) 842-AURA</p>
+              <p class="text-xs text-neutral-500 mt-0.5">Mon–Fri: 8:00 AM – 6:00 PM EST</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="p-3 rounded-lg bg-neutral-900 border border-neutral-800 text-lime-400">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs uppercase font-semibold text-neutral-400 tracking-wider">HQ Lab</p>
+              <p class="text-white font-medium text-sm mt-0.5">AURA Performance Labs, 404 Alpine Way, Boulder, CO 80302</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ quick prompt -->
+        <div class="p-6 bg-neutral-900/60 border border-neutral-800 rounded-xl">
+          <h3 class="font-bold text-white text-sm">Looking for an order return?</h3>
+          <p class="text-xs text-neutral-400 mt-1">If you need to return or exchange standard webstore items, you can generate a free return label on our automated self-service portal.</p>
+          <a href="#" class="inline-block mt-3 text-xs font-bold text-lime-400 hover:underline uppercase tracking-wide">Start a return &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Right Column: Form -->
+      <div class="lg:col-span-7">
+        <div class="bg-neutral-900/40 border border-neutral-800 rounded-2xl p-6 sm:p-10 backdrop-blur-sm">
+          <h2 class="font-display text-3xl uppercase tracking-wide text-white mb-6">Send Your Enquiry</h2>
+          
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">First Name *</label>
+                <input 
+                  type="text" 
+                  required
+                  placeholder="John" 
+                  class="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-lime-400 transition-colors"
+                />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Last Name *</label>
+                <input 
+                  type="text" 
+                  required
+                  placeholder="Doe" 
+                  class="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-lime-400 transition-colors"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Email Address *</label>
+                <input 
+                  type="email" 
+                  required
+                  placeholder="john@example.com" 
+                  class="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-lime-400 transition-colors"
+                />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Phone Number</label>
+                <input 
+                  type="tel" 
+                  placeholder="+1 (555) 000-0000" 
+                  class="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-lime-400 transition-colors"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Enquiry Category *</label>
+              <select class="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-lime-400 transition-colors">
+                <option value="wholesale">Wholesale & Team Bulk Orders (50+ units)</option>
+                <option value="sponsorship">Athlete Sponsorship & Ambassadorship</option>
+                <option value="press">Press & Media Inquiries</option>
+                <option value="support">Customer Support & Existing Orders</option>
+                <option value="other">Other Partnership Opportunities</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2">Your Message / Requirements *</label>
+              <textarea 
+                rows="5" 
+                required
+                placeholder="Tell us about your team, timeline, quantities, or specific questions..."
+                class="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-lime-400 transition-colors"
+              ></textarea>
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <input type="checkbox" id="consent" required class="accent-lime-400 rounded w-4 h-4" />
+              <label for="consent" class="text-xs text-neutral-400">
+                I agree to allow AURA Athletics to store and process my information in accordance with the <a href="#" class="text-lime-400 underline">Privacy Policy</a>.
+              </label>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full py-4 bg-lime-400 hover:bg-lime-300 text-black font-bold uppercase tracking-wider text-sm transition-all transform hover:-translate-y-0.5 shadow-lg shadow-lime-400/10"
+            >
+              Submit Enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-900 border-t border-neutral-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-xs text-neutral-500 gap-4">
+      <p>&copy; 2026 AURA Athletics Inc. All rights reserved.</p>
+      <div class="flex space-x-6">
+        <a href="index.html" class="hover:text-neutral-300">Home</a>
+        <a href="about.html" class="hover:text-neutral-300">About</a>
+        <a href="enquiry.html" class="hover:text-neutral-300">Enquiry</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
