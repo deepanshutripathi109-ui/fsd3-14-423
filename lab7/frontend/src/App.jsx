@@ -10,12 +10,13 @@ const b1 = {
 function Book(){
   return(
     <div>
-      <img src="https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY218_.jpg" alt="Design Pattern React JS" />
-      
+      <img src={b1.pickUrl}
+       alt={b1.bname} />
+
       <h1>Let's Learn React</h1>
-      <h2>Price : 765.00</h2>
-      <h3>Quantity:5</h3>
-      <h4>Rating : 5.0</h4>
+      <h2>Price : {b1.price}</h2>
+      <h3> Quantity : {b1.quantity}</h3>
+      <h4>Rating : {b1.rating}</h4>
     </div>
   )
 }
@@ -27,9 +28,7 @@ export default function App(){
       <Book/>
       <h1>Hello React</h1>
       <Book/>
-      <Book/>
-      <Book/>
-    
+      
       
     </>
   )
