@@ -1,3 +1,5 @@
+import Book from "./components/Book";
+import Pen from "./components/Pen";
 const b1 = {
   picUrl: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY218_.jpg",
   bname: "React Design Pattern",
@@ -12,19 +14,17 @@ const b2 = {
   quantity: 3,
   rating: 4.5,
 };
-
-function Book(props) {
-  const {rating,bname,price ,quantity,picURL} = props.book;
-  return (
-    <div>
-      <img src={props.book.picUrl} alt={props.book.bname}/>
-      <h1>{props.book.bname}</h1>
-      <h2>Price: {props.book.price}</h2>
-      <h3>Quantity: {props.book.quantity}</h3>
-      <h4>Rating: {props.book.rating}</h4>
-      <button className="button">Buy now</button>
-    </div>
-  );
+const p1 = {
+  picUrl: "https://rukminim2.flixcart.com/image/612/612/xif0q/pen/y/s/c/4030186-classmate-enriched-transparent-original-imag78yghkqchxdk.png?q=70",
+  company: "Reynolds",
+  price: 99,
+  
+};
+const p2 = {
+  picUrl: "https://rukminim2.flixcart.com/image/612/612/xif0q/pen/n/c/n/91246-flair-enriched-transparent-original-imageexytkdmpq9v.png?q=70",
+  company: "Flair",
+  price: 199,
+  
 }
 
 export default function App() {
@@ -39,6 +39,9 @@ export default function App() {
         <Book book={b1} />
         <Book book={b2} />
         <Book book={b2} />
+        <Pen pen={p1}/>
+        <Pen pen={p2}/>
+
       </div>
     </>
   );

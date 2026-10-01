@@ -22,4 +22,17 @@
 3. it should be treated as html tag
 4. it must be closed
     
+## object destructure
+    const {rating,bname,price ,quantity,picURL} = props.book;
+    does not depends on order, if property is not available then it initialize with null.
+* any document include style
+1. external css - CSS create class in index.css and used in components
+2. internal CSS - create property as object like 
+'''
+    
+'''    
+3. inline CSS - in this method we use 2 curly brackets with style attribue all the css property must be single word for ex: text-align becomes textAlign(Camel Case)
 
+
+* rafce - arrow function
+* rfce - normal function
