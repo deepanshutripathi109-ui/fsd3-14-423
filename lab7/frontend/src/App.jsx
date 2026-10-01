@@ -1,47 +1,45 @@
 const b1 = {
-  pickUrl : "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY218_.jpg",
-  bname : "React Design Pattern",
-  price:1199,
+  picUrl: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY218_.jpg",
+  bname: "React Design Pattern",
+  price: 1199,
   quantity: 10,
-  rating : 5.0,
+  rating: 5.0,
 };
 const b2 = {
-  pickUrl : "https://m.media-amazon.com/images/I/518+W2zr3BL._AC_UY218_.jpg",
-  bname : "React Design Pattern",
-  price:2619,
-  quantity: 10,
-  rating : 4.5,
+  picUrl: "https://m.media-amazon.com/images/I/518+W2zr3BL._AC_UY218_.jpg",
+  bname: "The Road to React",
+  price: 2886,
+  quantity: 3,
+  rating: 4.5,
 };
 
-
-function Book(props){
-  console.log(props);
-  
-  return(
+function Book(props) {
+  const {rating,bname,price ,quantity,picURL} = props.book;
+  return (
     <div>
-      <img src={props.book.pickUrl}
-       alt={b1.bname} />
-
-      <h1>Let's Learn React</h1>
-      <h2>Price : {props.book.price}</h2>
-      <h3> Quantity : {props.book.quantity}</h3>
-      <h4>Rating : {props.book.rating}</h4>
+      <img src={props.book.picUrl} alt={props.book.bname}/>
+      <h1>{props.book.bname}</h1>
+      <h2>Price: {props.book.price}</h2>
+      <h3>Quantity: {props.book.quantity}</h3>
+      <h4>Rating: {props.book.rating}</h4>
+      <button className="button">Buy now</button>
     </div>
-  )
+  );
 }
 
-
-export default function App(){
-  return(
+export default function App() {
+  
+  return (
     <>
-      <Book book ={b1}/>
-      <h1>Hello React</h1>
-      <Book book = {b2}/>
-      <Book book = {b1}/>
-      <Book book = {b2}/>
-      
+    <h1>Online Book Store</h1>
+    <div className="container">
+        <Book book={b1} />
+        
+        <Book book={b2} />
+        <Book book={b1} />
+        <Book book={b2} />
+        <Book book={b2} />
+      </div>
     </>
-  )
-
+  );
 }
-
