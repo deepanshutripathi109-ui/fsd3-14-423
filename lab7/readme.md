@@ -36,3 +36,10 @@
 
 * rafce - arrow function
 * rfce - normal function
+
+
+## add tailwind to existing react project 
+1. open terminal and goto project frontend folder
+2. install tailwind by
+`npm install tailwindcss @tailwindcss/vite`
+3. open vite.config.js
