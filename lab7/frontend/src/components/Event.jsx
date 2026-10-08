@@ -4,7 +4,7 @@ const MyButton = () => {
     }
 
   return <button 
-  style={{ height: "40px", width: "100px" }} 
+  className="bg-black text-white rounded p-3 " 
   onClick={handleClick}>
     Click Me
 </button>;
